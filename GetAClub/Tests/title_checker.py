@@ -1,7 +1,15 @@
 from selenium import webdriver
+import platform
 
-PATH = 'C:\Program Files (x86)\chromedriver.exe'
-driver = webdriver.Chrome(PATH)
+driver = None
+if platform.system() == 'Windows':
+    PATH = 'C:\Program Files (x86)\chromedriver.exe'
+    driver = webdriver.Chrome(PATH)
+elif platform.system() == 'Linux':
+    PATH = 'drivers/chromedriver'
+    driver = webdriver.Chrome(PATH)
+else:
+    print("[ERROR]")
 
 driver.get('https://geta-client-webapp-dev.azurewebsites.net/#/landing')
 
