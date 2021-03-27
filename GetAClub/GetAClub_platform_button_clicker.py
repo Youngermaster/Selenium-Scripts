@@ -8,5 +8,3 @@ driver.get('https://geta-client-webapp-dev.azurewebsites.net/#/landing')
 
 button = driver.find_element_by_xpath('/html/body/genesys-root/genesys-landing-page/section/div/div/div/swiper/div/div[1]/div[2]/div/div[3]/button[1]')
 button.click()
-submit = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[2]/button')
-submit.click()
