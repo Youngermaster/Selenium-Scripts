@@ -31,6 +31,5 @@ input_password.send_keys(Keys.RETURN)
 button_stay_signed = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/form/div/div/div[1]/div[2]/div/div[2]/div/div[3]/div[2]/div/div/div[1]/input'))
 button_stay_signed.click()
 
-
 form_first_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div/label/input'))
 form_first_question.click()
