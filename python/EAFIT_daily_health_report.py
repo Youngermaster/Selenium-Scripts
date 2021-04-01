@@ -33,3 +33,21 @@ button_stay_signed.click()
 
 form_first_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[2]/div/div[2]/div/div[1]/div/label/input'))
 form_first_question.click()
+
+form_second_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[3]/div/div[2]/div/div[1]/div/label/input'))
+form_second_question.click()
+
+form_third_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[4]/div/div[2]/div/div[2]/div/label/input'))
+form_third_question.click()
+
+form_fourth_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[5]/div/div[2]/div/div[2]/div/label/input'))
+form_fourth_question.click()
+
+form_fith_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[6]/div/div[2]/div/div[2]/div/label/input'))
+form_fith_question.click()
+
+form_sixth_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[7]/div/div[2]/div/div[2]/div/label/input'))
+form_sixth_question.click()
+
+submit = driver.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[3]/div[1]/button/div')
+submit.click()
