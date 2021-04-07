@@ -49,5 +49,14 @@ form_fith_question.click()
 form_sixth_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[7]/div/div[2]/div/div[2]/div/label/input'))
 form_sixth_question.click()
 
-submit = driver.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[3]/div[1]/button/div')
+form_seventh_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[8]/div/div[2]/div/div[2]/div/label/input'))
+form_seventh_question.click()
+
+form_eigth_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[9]/div/div[2]/div/div[2]/div/label/input'))
+form_eigth_question.click()
+
+form_nineth_question = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[2]/div[10]/div/div[2]/div/div[2]/div/label/input'))
+form_nineth_question.click()
+
+submit = driver.find_element_by_xpath('/html/body/div/div/div/div/div/div/div[1]/div[2]/div[3]/div[1]/button')
 submit.click()
