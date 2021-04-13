@@ -10,8 +10,8 @@ from selenium.webdriver.support import expected_conditions as EC
 #import names
 
 def click_element_by_xpath(xpath):
-    element_to_click = WebDriverWait(driver, 30).until(lambda x: x.find_element_by_xpath(xpath))
-    element_to_click.click()
+    #element_to_click = WebDriverWait(driver, 30).until(lambda x: x.find_element_by_xpath(xpath))
+    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
 
 if __name__ == "__main__":
     PATH = 'C:\Program Files (x86)\chromedriver.exe'
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     # Clicks submit
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[2]/button')
     # Click Avatar
-    WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "input[src='/styles/assets/img/avatars/Avatar_Assasin.png'][type='image']"))).click()
+    click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[3]/div[2]/div')
     #WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[2]/div[1]/div/img]"))).click()
     #click_element_by_xpath('') 
 
