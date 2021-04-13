@@ -10,7 +10,6 @@ from selenium.webdriver.support import expected_conditions as EC
 #import names
 
 def click_element_by_xpath(xpath):
-    #element_to_click = WebDriverWait(driver, 30).until(lambda x: x.find_element_by_xpath(xpath))
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
 
 if __name__ == "__main__":
@@ -21,15 +20,10 @@ if __name__ == "__main__":
 
     # SignUp button
     click_element_by_xpath('/html/body/genesys-root/genesys-landing-page/section/div/div/div/swiper/div/div[1]/div[2]/div/div[3]/button[1]')
-
-    # element_to_click = WebDriverWait(driver, 10).until(lambda x: x.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[1]/input'))
-    # element_to_click.clear()
-    # element_to_click.send_keys("March 19, 2001")
-    #element_to_click.send_keys(Keys.RETURN)
     # Date selector
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[1]/input')
     # Year selection
-    click_element_by_xpath('/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/mat-calendar/mat-calendar-header/div/div/button[1]/span')
+    click_element_by_xpath('/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/mat-calendar/mat-calendar-header/div/div/button[1]')
     # Backwards arrow button
     click_element_by_xpath('/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/mat-calendar/mat-calendar-header/div/div/button[2]')
     # Selects the year, in this case 2001
@@ -42,8 +36,7 @@ if __name__ == "__main__":
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[2]/button')
     # Click Avatar
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[3]/div[2]/div')
-    #WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[2]/div[1]/div/img]"))).click()
-    #click_element_by_xpath('') 
+
 
 # name = names.get_last_name()
 # email = name + '@gmail.com'
