@@ -43,13 +43,13 @@ if __name__ == "__main__":
 
     print(f'Password -> {password}')
 
-    # file = open("emailsAndPasswords.txt", "a")
-    # file.write("________________\n")
-    # file.write(f"\nName: {name}")
-    # file.write(f"\nEmail: {email}")
-    # file.write(f"\nPassword: {password}\n")
-    # file.write("________________\n")
-    # file.close()
+    file = open("emailsAndPasswords.txt", "a")
+    file.write("________________\n")
+    file.write(f"\nName: {name}")
+    file.write(f"\nEmail: {email}")
+    file.write(f"\nPassword: {password}\n")
+    file.write("________________\n")
+    file.close()
 
 
     full_name_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[1]')
