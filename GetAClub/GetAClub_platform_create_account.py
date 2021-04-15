@@ -4,10 +4,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 # Imports a random password generator
-#from generate_password import generate_password_with_special_characters
+from generate_password import get_simple_password
 
 # Use pip install names
-#import names
+import names
 
 def click_element_by_xpath(xpath):
     WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, xpath))).click()
@@ -37,27 +37,29 @@ if __name__ == "__main__":
     # Click Avatar
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[3]/div[2]/div')
 
+    name = names.get_last_name()
+    email = name + '@gmail.com'
+    password = get_simple_password(10)
 
-# name = names.get_last_name()
-# email = name + '@gmail.com'
-# password = generate_password_with_special_characters(10) + 'a'
-# 
-# file = open("emailsAndPasswords.txt", "a")
-# file.write("________________\n")
-# file.write(f"\nName: {name}")
-# file.write(f"\nEmail: {email}")
-# file.write(f"\nPassword: {password}\n")
-# file.write("________________\n")
-# file.close()
-# 
-# 
-# full_name_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[1]')
-# full_name_input.clear()
-# full_name_input.send_keys(name)
-# email_input =  driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[2]')
-# email_input.clear()
-# email_input.send_keys(email)
-# password_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[3]')
-# password_input.clear()
-# password_input.send_keys(password)
-# password_input.send_keys(Keys.RETURN)
+    print(f'Password -> {password}')
+
+    # file = open("emailsAndPasswords.txt", "a")
+    # file.write("________________\n")
+    # file.write(f"\nName: {name}")
+    # file.write(f"\nEmail: {email}")
+    # file.write(f"\nPassword: {password}\n")
+    # file.write("________________\n")
+    # file.close()
+
+
+    full_name_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[1]')
+    full_name_input.clear()
+    full_name_input.send_keys(name)
+    email_input =  driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[2]')
+    email_input.clear()
+    email_input.send_keys(email)
+    password_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[3]')
+    password_input.clear()
+    password_input.send_keys(password)
+    password_input.send_keys(Keys.RETURN)
+
