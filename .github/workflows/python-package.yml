@@ -41,9 +41,10 @@ jobs:
       run: pwd
     - name: Enable ChromeDriver
       run: |
-      cd drivers/
-      ls
-      sudo chmod 777 chromedriver
+        cd drivers/
+        ls
+        pwd
+        sudo chmod 777 chromedriver
     - name: Test with pytest
       run: |
         pwd
