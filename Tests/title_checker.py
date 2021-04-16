@@ -3,7 +3,7 @@ import platform
 
 driver = None
 if platform.system() == 'Windows':
-    PATH = 'C:\Program Files (x86)\chromedriver.exe'
+    PATH = 'C:\\Program Files (x86)\\chromedriver.exe'
     driver = webdriver.Chrome(PATH)
 elif platform.system() == 'Linux':
     PATH = 'drivers/chromedriver'
