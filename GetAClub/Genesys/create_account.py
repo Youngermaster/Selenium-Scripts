@@ -9,7 +9,6 @@ from generate_password import get_simple_password
 # Use pip install names
 import names
 
-
 def click_element_by_xpath(xpath):
     WebDriverWait(driver, 20).until(
         EC.element_to_be_clickable((By.XPATH, xpath))).click()
