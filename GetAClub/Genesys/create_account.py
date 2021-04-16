@@ -17,6 +17,9 @@ def generate_user():
     email = name + '@gmail.com'
     password = get_simple_password(10)
 
+    return name, email, password
+
+def store_user(name, email, password):
     file = open("emailsAndPasswords.txt", "a")
     file.write("________________\n")
     file.write(f"\nName: {name}")
@@ -25,7 +28,6 @@ def generate_user():
     file.write("________________\n")
     file.close()
 
-    return name, email, password
 
 
 def create_account(driver):
@@ -51,6 +53,8 @@ def create_account(driver):
     click_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[3]/div[2]/div')
     
     name, email, password = generate_user()
+
+    store_user(name, email, password)
 
     full_name_input = driver.find_element_by_xpath('/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/div/form/input[1]')
     full_name_input.clear()
