@@ -1,14 +1,8 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 from create_account import click_element_by_xpath, create_account, skip_tutorial
 
 
-def change_avatar(driver):
-    create_account(driver)
+def change_avatar():
+    create_account()
 
     skip_tutorial()
 
@@ -26,6 +20,4 @@ def change_avatar(driver):
 
 
 if __name__ == "__main__":
-    PATH = 'C:\Program Files (x86)\chromedriver.exe'
-    driver = webdriver.Chrome(PATH)
-    change_avatar(driver)
+    change_avatar()
