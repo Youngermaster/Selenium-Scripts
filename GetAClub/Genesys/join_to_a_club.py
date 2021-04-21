@@ -16,10 +16,11 @@ def join_to_a_club():
 
     # * Clicks confirm error button
     click_element_by_xpath(
-        '/html/body/div[2]/div[4]/div/mat-dialog-container/genesys-ctrl-notification/div/button')
+        '/html/body/div[3]/div[4]/div/mat-dialog-container/genesys-ctrl-notification/div/button')
 
+    # * Clicks confrimation success button
     click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/genesys-ctrl-notification/div/button')
+        '/html/body/div[3]/div[2]/div/mat-dialog-container/genesys-ctrl-notification/div/button')
 
 
 if __name__ == "__main__":

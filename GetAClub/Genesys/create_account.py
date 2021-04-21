@@ -38,31 +38,29 @@ def create_account():
 
     # SignUp button
     click_element_by_xpath(
-        '/html/body/genesys-root/genesys-landing-page/section/div/div/div/swiper/div/div[1]/div[2]/div/div[3]/button[1]')
+        '//*[@id="swiper-wrapper-1a2e546097e3d932"]/div[2]/div/div[4]/button[1]')
     # Date selector
     click_element_by_xpath(
         '/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[1]/input')
     # Year selection
     click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header/div/div/button[1]/span[1]')
-    # Backwards arrow button
-    click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header/div/div/button[2]')
+        '/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/mat-calendar-header/div/div/button[1]')
+   
     # Selects the year, in this case 2001
     click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-multi-year-view/table/tbody/tr[6]/td[2]/div[1]')
+        '/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-multi-year-view/table/tbody/tr[6]/td[2]')
     # Selects the month, in this case march
     click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-year-view/table/tbody/tr[2]/td[3]/div[1]')
+        '/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-year-view/table/tbody/tr[2]/td[3]')
     # Selects the day, in this case 19
     click_element_by_xpath(
-        '/html/body/div[2]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[2]/div[1]')
+        '/html/body/div[3]/div[2]/div/mat-dialog-container/mat-datepicker-content/div[2]/mat-calendar/div/mat-month-view/table/tbody/tr[4]/td[2]')
     # Clicks submit
     click_element_by_xpath(
-        '/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[2]/button')
+        '//html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[2]/button')
     # Click Avatar
     click_element_by_xpath(
-        '/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[3]/div[2]/div')
+        '/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/genesys-gallery-form/section/div/div[2]/div[1]/div/img')
 
     name, email, password = generate_user()
 
