@@ -38,7 +38,7 @@ jobs:
         wget https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
         sudo chmod +x chromedriver
-        mkdir /opt/WebDriver/bin
+        sudo mkdir /opt/WebDriver/bin
         mv chromedriver /opt/WebDriver/bin
         export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
         sudo apt-get update -y
