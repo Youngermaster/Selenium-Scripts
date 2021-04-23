@@ -38,7 +38,7 @@ def create_account():
 
     # SignUp button
     click_element_by_xpath(
-        '//*[@id="swiper-wrapper-1a2e546097e3d932"]/div[2]/div/div[4]/button[1]')
+        '/html/body/genesys-root/genesys-landing-page/section/div/div[1]/div/swiper/div/div[1]/div[2]/div/div[4]/button[1]')
     # Date selector
     click_element_by_xpath(
         '/html/body/genesys-root/genesys-signup-page/section/div/div[2]/div/form/div/div[1]/input')
