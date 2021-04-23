@@ -38,12 +38,15 @@ jobs:
         wget https://chromedriver.storage.googleapis.com/90.0.4430.24/chromedriver_linux64.zip
         unzip chromedriver_linux64.zip
         sudo chmod +x chromedriver
-        sudo mkdir /opt/WebDriver/bin
+        cd /opt/
+        mkdir WebDriver/
+        mkdir WebDriver/bin
         mv chromedriver /opt/WebDriver/bin
         export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
         sudo apt-get update -y
         sudo apt-get install firefox -y
         pip3 install selenium
         pip install selenium
+        cd
         cd Tests
         pytest title_checker.py --browser=chrome --headless
