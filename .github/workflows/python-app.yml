@@ -34,5 +34,7 @@ jobs:
     - name: Test with pytest
       run: |
         sudo apt-get install chromium-chromedriver -y
+        pip3 install selenium
+        pip install selenium
         cd Tests
         pytest title_checker.py
