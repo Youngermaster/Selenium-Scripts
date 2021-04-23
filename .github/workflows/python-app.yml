@@ -48,4 +48,4 @@ jobs:
         pip3 install selenium
         pip install selenium
         cd /home/runner/work/Selenium-Scripts/Selenium-Scripts/Tests
-        pytest title_checker.py --browser=chrome --headless
+        pytest title_checker.py
